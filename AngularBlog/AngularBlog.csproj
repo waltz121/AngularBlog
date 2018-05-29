@@ -215,6 +215,7 @@
     <Content Include="app\Login\login.component.html" />
     <Content Include="app\users-registration\users-registration.component.css" />
     <Content Include="app\users-registration\users-registration.component.html" />
+    <Content Include="app\users\users.component.css" />
     <Content Include="app\users\users.component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -307,6 +308,7 @@
     <TypeScriptCompile Include="app\services\blog.service.ts" />
     <TypeScriptCompile Include="app\services\login.service.ts" />
     <TypeScriptCompile Include="app\services\user.service.ts" />
+    <TypeScriptCompile Include="app\user-editor.module.ts" />
     <TypeScriptCompile Include="app\user-login.module.ts" />
     <TypeScriptCompile Include="app\users-registration\users-registration.component.ts" />
     <TypeScriptCompile Include="app\users\users.component.ts" />

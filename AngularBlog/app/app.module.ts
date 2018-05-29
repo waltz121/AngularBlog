@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AgGridModule } from 'ag-grid-angular';
 
 //Component
-import { UserComponent } from './users/users.component';
+
 import { BlogComponent } from './blog/blog.component';
 import { AppComponent } from './app.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
@@ -13,6 +13,7 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 //Other Modules
 import { AppRoutingModule } from './app-routing.module';
 import { UserLoginModule } from './user-login.module';
+import { UserEditorModule } from './user-editor.module';
 
 //Services
 import { BlogService } from './services/blog.service';
@@ -28,13 +29,13 @@ import { BlogEditRenderer } from './utils/blog-edit-renderer.component';
         FormsModule,
         AppRoutingModule,
         UserLoginModule,
+        UserEditorModule,
         AgGridModule.withComponents([
             BlogEditRenderer
         ])
     ],
     declarations: [
-        AppComponent,
-        UserComponent,
+        AppComponent,        
         BlogComponent,
         BlogDetailComponent,
         BlogEditRenderer

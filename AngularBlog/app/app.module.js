@@ -12,13 +12,13 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var ag_grid_angular_1 = require("ag-grid-angular");
 //Component
-var users_component_1 = require("./users/users.component");
 var blog_component_1 = require("./blog/blog.component");
 var app_component_1 = require("./app.component");
 var blog_detail_component_1 = require("./blog-detail/blog-detail.component");
 //Other Modules
 var app_routing_module_1 = require("./app-routing.module");
 var user_login_module_1 = require("./user-login.module");
+var user_editor_module_1 = require("./user-editor.module");
 //Services
 var blog_service_1 = require("./services/blog.service");
 var login_service_1 = require("./services/login.service");
@@ -35,13 +35,13 @@ var AppModule = /** @class */ (function () {
                 forms_1.FormsModule,
                 app_routing_module_1.AppRoutingModule,
                 user_login_module_1.UserLoginModule,
+                user_editor_module_1.UserEditorModule,
                 ag_grid_angular_1.AgGridModule.withComponents([
                     blog_edit_renderer_component_1.BlogEditRenderer
                 ])
             ],
             declarations: [
                 app_component_1.AppComponent,
-                users_component_1.UserComponent,
                 blog_component_1.BlogComponent,
                 blog_detail_component_1.BlogDetailComponent,
                 blog_edit_renderer_component_1.BlogEditRenderer

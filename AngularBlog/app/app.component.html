@@ -1,0 +1,16 @@
+﻿<h1> {{title}}</h1>
+
+
+
+<div *ngIf="!(loginService.currentUserLoginInfo.successLogin )">
+    <app-login [loginInfo]="loginInfo"></app-login>
+</div>
+
+<div *ngIf="loginService.currentUserLoginInfo.successLogin ">
+    <nav>
+        <a routerLink="/blog">Blog</a>
+        <a routerLink="/users">Users</a>
+        <a (click)="LogOut()">logout</a>
+    </nav>
+    <router-outlet></router-outlet>
+</div>

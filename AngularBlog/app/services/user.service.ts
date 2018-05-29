@@ -9,5 +9,4 @@ const httpOptions = {
 
 @Injectable()
 export class UserService {
-
 }

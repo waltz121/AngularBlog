@@ -1,7 +1,9 @@
-﻿import { NgModule } from '@angular/core';
+﻿//Angular Modules
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AgGridModule } from 'ag-grid-angular';
 
 import { UserComponent } from './users/users.component';
 
@@ -9,7 +11,8 @@ import { UserComponent } from './users/users.component';
     imports: [
         BrowserModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        AgGridModule.withComponents([])
     ],
     declarations: [
         UserComponent

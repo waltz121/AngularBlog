@@ -202,6 +202,7 @@
     </Compile>
     <Compile Include="Models\ViewModel\BlogViewModel.cs" />
     <Compile Include="Models\ViewModel\LoginViewModel.cs" />
+    <Compile Include="Models\ViewModel\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -303,6 +304,7 @@
     <TypeScriptCompile Include="app\class\blogPost.ts" />
     <TypeScriptCompile Include="app\class\FormModel\userRegistrationFormModel.ts" />
     <TypeScriptCompile Include="app\class\loginInfo.ts" />
+    <TypeScriptCompile Include="app\class\usersInfo.ts" />
     <TypeScriptCompile Include="app\Login\login.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\services\blog.service.ts" />

@@ -6,10 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+//Angular Modules
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
+var ag_grid_angular_1 = require("ag-grid-angular");
 var users_component_1 = require("./users/users.component");
 var UserEditorModule = /** @class */ (function () {
     function UserEditorModule() {
@@ -19,7 +21,8 @@ var UserEditorModule = /** @class */ (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                http_1.HttpClientModule
+                http_1.HttpClientModule,
+                ag_grid_angular_1.AgGridModule.withComponents([])
             ],
             declarations: [
                 users_component_1.UserComponent

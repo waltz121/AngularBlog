@@ -43,7 +43,9 @@ export class UserComponent implements OnInit {
 
     constructor(
         private userService: UserService
-    ) { }    
+    ) {
+        this.context = { componentParent: this };
+    }    
 
     initData(): void {
         this.userService.getAllUsers()
@@ -51,5 +53,12 @@ export class UserComponent implements OnInit {
             {
                 this.users = data;
             });
+    }
+
+    OnGridReady(params: any) {
+        this.gridApi = params.api;
+        this.gridColumnApi = params.columnApi;
+
+        params.api.sizeColumnsToFit();
     }
 }

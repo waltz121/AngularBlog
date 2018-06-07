@@ -32,6 +32,7 @@ var UserComponent = /** @class */ (function () {
             { headerName: 'Email', field: 'email' },
             { headerName: 'Status', field: 'status' }
         ];
+        this.context = { componentParent: this };
     }
     UserComponent.prototype.ngOnInit = function () {
         this.initData();
@@ -42,6 +43,11 @@ var UserComponent = /** @class */ (function () {
             .subscribe(function (data) {
             _this.users = data;
         });
+    };
+    UserComponent.prototype.OnGridReady = function (params) {
+        this.gridApi = params.api;
+        this.gridColumnApi = params.columnApi;
+        params.api.sizeColumnsToFit();
     };
     UserComponent = __decorate([
         core_1.Component({

@@ -4,5 +4,10 @@
                  class="ag-theme-balham"
                  [rowData]="users"
                  [columnDefs]="columnDefs"
+                 [pagination]="true"
+                 [enableFilter]="true"
+                 [enableSorting]="true"
+                 [context]="context"
+                 (gridReady)="OnGridReady($event)"
                  >
 </ag-grid-angular>

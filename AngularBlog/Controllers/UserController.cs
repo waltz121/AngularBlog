@@ -5,18 +5,33 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using AngularBlog.Models;
+using AngularBlog.Models.ViewModel;
 
 namespace AngularBlog.Controllers
 {
     public class UserController : ApiController
     {
         [HttpGet]
-        public List<user> getAllUsers()
+        public List<UserViewModel> getAllUsers()
         {
             using(BlogEntities entities = new BlogEntities())
             {
-               var UserList = entities.users.ToList();
-                return UserList;
+                var UserList = from user in entities.users.ToList()
+                               select new UserViewModel
+                               {
+                                  id = user.id,
+                                  name = user.name,
+                                  lastname = user.lastname,
+                                  birthdate = user.birthdate,
+                                  created = user.created,
+                                  updated = user.updated,
+                                  status = user.status,
+                                  email = user.email
+                               };
+
+                var vm = UserList.ToList();
+
+                return vm;
             }
         }
 

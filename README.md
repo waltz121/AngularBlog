@@ -1,4 +1,3 @@
 # AngularBlog
 
-Angular-User-Details
-Angular blog with added User Editor functionality and more ag-grid practice
+Angular Blog Project to help me practice angular 5 with integration on Visual Studio
